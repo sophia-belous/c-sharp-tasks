@@ -1,0 +1,56 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:chartingToolkit="clr-namespace:System.Windows.Controls.DataVisualization.Charting;assembly=System.Windows.Controls.DataVisualization.Toolkit" xmlns:visualizationToolkit="clr-namespace:System.Windows.Controls.DataVisualization;assembly=System.Windows.Controls.DataVisualization.Toolkit" x:Class="task_3_wpf.MainWindow"
+        Title="MainWindow" Height="208.917" Width="455.566" ResizeMode="NoResize">
+    <Window.Resources>
+        <Style x:Key="LegendStyle" TargetType="{x:Type visualizationToolkit:Legend}">
+            <Setter Property="Margin" Value="15,0"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="BorderBrush" Value="#FFDBDBDB"/>
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.442,0.005" StartPoint="0.558,0.995">
+                        <GradientStop Color="#FFDBDBDB"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="IsTabStop" Value="False"/>
+            <Setter Property="IsTextSearchEnabled" Value="False"/>
+            <Setter Property="UseLayoutRounding" Value="False"/>
+            <Setter Property="AllowDrop" Value="False"/>
+            <Setter Property="IsEnabled" Value="True"/>
+            <Setter Property="Template" Value="{DynamicResource LegendControlTemplate}"/>
+
+        </Style>
+        <ControlTemplate x:Key="LegendControlTemplate" TargetType="{x:Type visualizationToolkit:Legend}">
+            <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Padding="2" IsHitTestVisible="True">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <visualizationToolkit:Title x:Name="HeaderContent" ContentTemplate="{TemplateBinding HeaderTemplate}" Content="{TemplateBinding Header}" Grid.Row="0" Style="{TemplateBinding TitleStyle}"/>
+                    <ScrollViewer BorderThickness="0" IsTabStop="False" Padding="0" Grid.Row="1" VerticalScrollBarVisibility="Auto">
+                        <ItemsPresenter x:Name="Items" Margin="10,0,10,10" OpacityMask="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}"/>
+                    </ScrollViewer>
+                </Grid>
+            </Border>
+        </ControlTemplate>
+    </Window.Resources>
+    <Grid>
+
+        <TextBox x:Name="TextBoxWriter" HorizontalAlignment="Left" Height="26" Margin="27,38,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="143"/>
+        <TextBox x:Name="TextBoxReader" HorizontalAlignment="Left" Height="23" Margin="60,94,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="69" RenderTransformOrigin="1.901,0.53"/>
+        <Button Content="Get NOD" HorizontalAlignment="Left" Margin="60,69,0,0" VerticalAlignment="Top" Width="69" Click="Button_Click"/>
+        <Label Content="Input numbers" HorizontalAlignment="Left" Margin="45,0,0,0" VerticalAlignment="Top" Width="102" Height="33" FontWeight="Bold" RenderTransformOrigin="0.685,0.641"/>
+        <chartingToolkit:Chart x:Name="ColumnChart" HorizontalAlignment="Left" Margin="175,0,0,0" Title="Difference of work speed" VerticalAlignment="Top">
+            <chartingToolkit:ColumnSeries DependentValuePath="Value" IndependentValuePath="Key" DataContext="{Binding}" ItemsSource="{Binding}" />
+        </chartingToolkit:Chart>
+        <chartingToolkit:Chart x:Name="BarChart" HorizontalAlignment="Left" Margin="175,0,0,0" Title="Difference of work speed" VerticalAlignment="Top" IsHitTestVisible="True" UseLayoutRounding="False" LegendStyle="{DynamicResource LegendStyle}">
+
+            <chartingToolkit:BarSeries  DependentValuePath="Value" IndependentValuePath="Key" DataContext="{Binding}" ItemsSource="{Binding}" IsSelectionEnabled="True"/>
+        </chartingToolkit:Chart>
+    </Grid>
+</Window>

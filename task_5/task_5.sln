@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VectorAndPolinomLibrary", "VectorAndPolinomLibrary\VectorAndPolinomLibrary.csproj", "{5E19B550-17F5-4DAB-86D4-FF6FD3EF89B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task_5_test", "task_5_test\task_5_test.csproj", "{C9AE05A9-FF43-489A-96A9-4FD4AFA660CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task_5_console", "task_5_console\task_5_console.csproj", "{1F8C1AF8-6351-45BD-B7A6-CC5F7C3CB507}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5E19B550-17F5-4DAB-86D4-FF6FD3EF89B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E19B550-17F5-4DAB-86D4-FF6FD3EF89B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E19B550-17F5-4DAB-86D4-FF6FD3EF89B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E19B550-17F5-4DAB-86D4-FF6FD3EF89B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9AE05A9-FF43-489A-96A9-4FD4AFA660CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9AE05A9-FF43-489A-96A9-4FD4AFA660CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9AE05A9-FF43-489A-96A9-4FD4AFA660CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9AE05A9-FF43-489A-96A9-4FD4AFA660CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F8C1AF8-6351-45BD-B7A6-CC5F7C3CB507}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F8C1AF8-6351-45BD-B7A6-CC5F7C3CB507}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F8C1AF8-6351-45BD-B7A6-CC5F7C3CB507}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F8C1AF8-6351-45BD-B7A6-CC5F7C3CB507}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

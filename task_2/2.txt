@@ -1,0 +1,22 @@
+        static int perevod(int temp)
+        {
+            int temp1 = 0;
+            List<int> s = new List<int>();
+            while (temp > 0)
+            {
+                temp1 = temp % 2;
+                temp = temp / 2;
+                s.Add(temp1);
+            }
+            return obrat(s);
+        }
+
+        static int obrat(List<int> norm)
+        {
+            int[] s = new int[norm.Count];
+            for (int i = norm.Count - 1; i >= 0; i--)
+            {
+                s[norm.Count - 1 - i] = norm[i];
+            }
+            return Convert.ToInt32(string.Join<int>("", s));
+        }
