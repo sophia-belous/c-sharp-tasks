@@ -34,7 +34,7 @@ namespace task_9_wpf
 
         private void CreateFileButton_Click(object sender, RoutedEventArgs e)
         {
-            TextBoxForWrite.TextChanged -= TextBoxForWrite_TextChanged; // умничка ^^
+            TextBoxForWrite.TextChanged -= TextBoxForWrite_TextChanged;
             dlg.FileName = "Document";
             dlg.DefaultExt = ".txt";
             dlg.Filter = "Text documents (.txt)|*.txt";
